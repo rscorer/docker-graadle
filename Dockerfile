@@ -18,8 +18,8 @@ VOLUME /home/gradle/.gradle
 
 WORKDIR /home/gradle
 
-RUN apt-get update \
-    && apt-get install --yes --no-install-recommends \
+RUN yum update -y \
+    && yum install -y \
         fontconfig \
         unzip \
         wget \
@@ -30,7 +30,7 @@ RUN apt-get update \
         mercurial \
         openssh-client \
         subversion \
-    && rm -rf /var/lib/apt/lists/*
+    && rm -rf /var/cache/yum
 
 ENV GRADLE_VERSION 6.5.1
 ARG GRADLE_DOWNLOAD_SHA256=50a7d30529fa939721fe9268a0205142f3f2302bcac5fb45b27a3902e58db54a
