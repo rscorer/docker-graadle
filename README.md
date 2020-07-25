@@ -1,2 +1,3 @@
 # docker-graadle
-docker for gradle &amp; graal
+
+docker image for Gradle in a graalvm
